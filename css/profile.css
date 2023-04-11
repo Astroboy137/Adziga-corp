@@ -1,0 +1,64 @@
+.cont {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: 100%;
+    background-image: url('../img/fire3.png');
+}
+p{color: white;}
+.cont .head {
+    margin: 70px auto;
+    width: 90%;
+    box-shadow: 0 0 15px white;
+    min-height: 20px;
+    border: none;
+    border-radius: 7px;
+    background: #000000c7;
+}
+.avatar{
+    border: none;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 15px white;
+    position: relative;
+    top: 30px;
+    left: 30px;
+}
+.avatar > img {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+.avatar > button{
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    bottom: 56px;
+    left: 150px;
+}
+.nickname {
+    color: white;
+    position: relative;
+    top: -180px;
+    left: 259px;
+    font-size: 17pt;
+    max-width: 300px;
+}
+.nums {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 100px);
+    width: 500px;
+    justify-content: center;
+    justify-items: center; /* Размещаем карточку по центру */
+    column-gap: 50px;
+    position: relative;
+    top: -170px;
+    left: 260px;
+}
+.nums > div {width: 100px;}
+.nums div p {width: 100%; text-align: center;}

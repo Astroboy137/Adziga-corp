@@ -1,0 +1,94 @@
+@font-face {
+    font-family: slavic;
+    src: url('../fonts/slavic.ttf');
+}
+:root{
+    --fon: black;
+}
+body{
+    background-color: var(--fon);
+    transition: .3s;
+}
+.cont {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: url('../img/fire3.png');
+    background-size: 100%;
+}
+.window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: black;
+    width: 400px;
+    box-shadow: 0 0 15px rgb(172, 103, 0);
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 20px;
+}
+
+.window .user-box {
+    margin: 20px 10%;
+    height: 73px;
+
+}
+
+.window .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.window label {
+    position: relative;
+    top: -54px;
+    left: -17px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: rgb(181, 181, 181);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.window .user-box input:focus ~ label,
+.window .user-box input:valid ~ label{
+    top: -80px;
+    /* left: 0; */
+    color: rgb(172, 103, 0);
+    font-size: 14px;
+}
+
+.window #sub{
+    width: 79%;
+    margin:20px 10%;
+    margin-bottom: 35px;
+    height: 40px;
+    font-family: slavic;
+    border: none;
+    border-radius: 10px;
+    background: #c56700e3;
+    font-size: 19pt;
+    color: white;
+}
+.window h1{
+    color: white;
+    font-family: slavic;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.window p{
+    color: white;
+    margin: 0 10%;
+    font-family: slavic;
+    font-size: 10pt;
+}
+.window a {color: rgb(181, 181, 181);}

@@ -1,0 +1,135 @@
+@font-face {
+    font-family: slavic;
+    src: url('../fonts/slavic.ttf');
+}
+:root{
+    --clrtwo:#663d00;
+    --circle: 35vw;
+}
+
+.cont {
+    background-color: black;
+    width: 100%;
+    height: 100vh; 
+    background-size: cover;
+} 
+img{
+    width:45vw;
+    min-height: 60vh;
+    position: absolute;
+    margin-left: 53%;
+    top:50%;
+    transform: translate(0,-50%);
+}
+.text1{
+    position: absolute;
+    color: white;
+    font-family: slavic;
+    width: 45vw;
+    height: 75vh;
+    left: 3vw;
+    top: 12vh;
+}
+.text1 h1{
+    text-align: center;
+    width: 100%;
+    font-size: 65pt;
+    margin: 0;
+    margin-top: 58px;
+}
+.text1 p{
+    color: rgb(181, 181, 181);
+    text-align: center;
+}
+.text1 #randtxt{
+    text-align: justify;
+    margin: 0 auto;
+    width: 35vw;
+}
+.text1 button{
+    width: 67%;
+    height: 9vh;
+    color: white;
+    font-family: slavic;
+    background-color: #c56700e3;
+    font-size: 30pt;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 16px);
+    border: none;
+    border-radius: 13px;
+}
+/* text button */
+
+.gradientic, .gradientic2{
+    background: linear-gradient( black 50%, var(--clrtwo));
+    width: 100%;
+    height: 200px;
+}
+.gradientic2{background: linear-gradient(0deg, black 50%, var(--clrtwo));}
+
+.cont2{
+    width: 100%;
+    height: 100vh;
+    background: var(--clrtwo);
+}
+.cont2 button{
+    position: absolute;
+    height: 100%;
+    width: 7%;
+    border: none;
+    background-color: transparent;
+}
+.cont2 .back {
+    left: 0;
+    background-image: url('../img/buttons/shevron96.png');
+    background-size: 55px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+.cont2 .next{
+    right: 0;
+    background-image: url('../img/buttons/shevron96.png');
+    background-size: 55px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: rotateZ(180deg);
+}
+
+.cont3{
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+/* spin box */
+.spin-box{
+    width: var(--circle);
+    height: var(--circle);
+    position: relative;
+    top: 50%;
+    transform: translate(5%,-50%);
+}
+.spin-box #circle{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(rgb(238, 255, 0),rgb(255, 123, 0));
+    transition: .2s;
+}
+.spin-box button{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgb(255, 136, 0);
+    border: none;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transition: .2s;
+    z-index: 1;
+}
+.spin-box button:hover{background-color: rgb(255, 187, 0);}
+
