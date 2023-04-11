@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+
+</head>
+<body>
+
+    <!-- sql-подключение -->
+
+    <?php
+
+        $conn = new mysqli("localhost",'root','','adziga-bd');
+        
+    ?>
+
+    <!-- html -->
+
+    <header>
+        <ul>
+            <li class="logo"><a href="index.html">Adziga</a></li>
+            <li class="pusto"></li>
+            <li><a href="reg.html">Представся</a></li>
+            <li><a href="login.html">Зайди</a></li>
+            <li><a href="top.html">Лучшый шашлыки</a></li>
+            <li><a href="menu.html">Шашлыки</a></li>
+        </ul>
+    </header>
+
+    <div class="cont">
+        <div class="ADS"></div>
+
+        <div id="catalog" class="catalog"> 
+            <div class="block">
+
+                <div class="card_top">
+                    <div class="card_image">
+                        <a href="#"><img src="" alt=""></a>
+                    </div>
+                </div>
+                <!-- пока-что только так, остальные лучше через js генерировать -->
+                <div class="card_bottom">
+                    <?php
+                        $out = "SELECT * FROM content WHERE id = 4";
+                        $res = $conn->query($out);
+                        while($row = $res->fetch_assoc()){
+                            echo "<p>",
+                            $row["name"],"</br>", $row["value"],
+                            "</p>";
+                        }
+                    ?>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/menu_db.js"></script>
+
+</body>
+</html>

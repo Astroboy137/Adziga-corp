@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вхади</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/log_reg.css">
+    <script src="JS/login.js"></script>
+</head>
+<body style="background-color: var(--fon);">
+    <header>
+        <ul>
+            <li class="logo"><a href="index.html">Adziga</a></li>
+            <li class="pusto"></li>
+            <li><a href="reg.html">Представся</a></li>
+            <li><a href="login.html">Зайди</a></li>
+            <li><a href="top.html">Лучшый шашлыки</a></li>
+            <li><a href="menu.php">Шашлыки</a></li>
+        </ul>
+    </header>
+    
+    <div class="cont">
+        <div class="window">
+            <h1>вход</h1>
+            <form action="./php/log.php" method="post">
+                <div class="user-box">
+                    <input type="text" name="log" required="">
+                    <label>Логин</label>
+                </div>
+                <div class="user-box">
+                    <input type="password" name="pass" required="">
+                    <label>Парол</label>
+                </div>
+                
+                <p>Не знакомы? <a href="reg.html">Представся!</a></p>
+                <input type="submit" value="салам" id="sub">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
