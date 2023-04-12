@@ -1,16 +1,19 @@
-const spin_box = document.getElementById('circle');
+function create_imgs(){
+    const spis = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'purple']
 
-function spin(){
-    console.log(1)
-    var x = 0;
-    loop()
-    function loop(){
-        setTimeout(() => {
-            console.log(x)
-            spin_box.style.transform = 'rotateZ('+x+'deg)'
-            x += 10
-            if (x < 1000){loop()}
-        }, 50);
-    
+    for (let i = 0; i < spis.length; i++) {
+        const x = spis[i];
+        var box = document.createElement('div')
+        box.className = 'slider_cont'
+        box.innerHTML = '<img>'+x+'</img>'
+        document.getElementById('slider').append(box)
     }
+}
+create_imgs()
+
+function slide(side) {
+    document.getElementById('slider').scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    })
 }
