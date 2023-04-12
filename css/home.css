@@ -13,7 +13,7 @@
     height: 100vh; 
     background-size: cover;
 } 
-img{
+.cont img{
     width:45vw;
     min-height: 60vh;
     position: absolute;
@@ -79,6 +79,7 @@ img{
     width: 7%;
     border: none;
     background-color: transparent;
+    z-index: 1;
 }
 .cont2 .back {
     left: 0;
@@ -94,6 +95,18 @@ img{
     background-repeat: no-repeat;
     background-position: 50%;
     transform: rotateZ(180deg);
+}
+.cont2 .corob{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+.cont2 img{
+    height: 400px;
+    min-width: 400px;
 }
 
 .cont3{
