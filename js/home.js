@@ -24,24 +24,25 @@ function slide(side) {
         behavior: 'smooth',
         block: 'start'
     })
-    console.log(num)
-    if (side == 'right') {
-        
-        if (num < slider_cfg.length - 1) {
-            num++
-        } else {
-            num = 0
+    slider_image.style.opacity = '0'
+    setTimeout(function() {
+        if (side == 'right') {
+            if (num < slider_cfg.length - 1) {
+                num++
+            } else {
+                num = 0
+            }
+            slider_image.src = slider_cfg[num]
+        } else if (side == 'left') {
+            if (num != 0) {
+                num--
+            } else {
+                num = slider_cfg.length - 1
+            }
+            slider_image.src = slider_cfg[num]
         }
-        slider_image.src = slider_cfg[num]
-    } else if (side == 'left') {
-        
-        if (num != 0) {
-            num--
-        } else {
-            num = slider_cfg.length - 1
-        }
-        slider_image.src = slider_cfg[num]
-    }
+        slider_image.style.opacity = '1'
+    },500)
 }
 
 // varibles

@@ -107,6 +107,8 @@
 .cont2 img{
     height: 400px;
     min-width: 400px;
+    opacity: 1;
+    transition: .2s;
 }
 
 .cont3{
