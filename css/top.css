@@ -1,0 +1,50 @@
+.catalog .block {
+    width: 225px;
+    min-height: 350px;
+    box-shadow: 0 0 5px white;
+    transition: .2s;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 24px;
+    padding: 14px;
+} 
+.catalog .block:hover{
+    box-shadow: 0 0 15px white;
+}
+.card_top {
+    flex: 0 0 220px;
+    position: relative;
+    overflow: hidden;
+}
+.card_image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.card_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* встраиваение картинки в .card_image*/
+    transition: .2s;
+}
+.card_bottom{
+    display: flex;
+    flex: 1 0 auto;
+}
+.card_bottom p{color: white; font-family: slavik;}
+.card_bottom p:nth-child(1){
+    text-align: center;
+    width: 100%;
+}
+.card_bottom p:nth-child(2){
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 24px;
+}
