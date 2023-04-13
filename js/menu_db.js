@@ -1,4 +1,4 @@
-const = 
+const catalog = []
 
 function add_box() {
     console.log(0)
@@ -23,11 +23,37 @@ function add_box() {
         <script>let i = 4\
     i++\
     </script>\
+    <button id="like" class="like" onclick="like()">\
     </div>'
     
     document.getElementById('catalog').append(box)
 }
-for (let index = 0; index < 10; index++) {
-    add_box()
+// for (let index = 0; index < 10; index++) {
+//     add_box()
     
+// }
+// надобудет добавить базу данных для лайков
+// пока что это просто анимация лайка
+var flag = 1
+function like() {
+    const btn = document.getElementById('like')
+    const btn_stl = btn.style
+    if (flag > 0) {
+        btn_stl.opacity = 0
+        btn_stl.backgroundSize = '10px'
+        setTimeout(() => {
+            btn_stl.backgroundImage = "url('img/buttons/like_on.png')"
+            btn_stl.opacity = 1
+            btn_stl.backgroundSize = '32px'
+        }, 150);
+    } else if (flag < 0) {
+        btn_stl.opacity = 0
+        btn_stl.backgroundSize = '10px'
+        setTimeout(() => {
+            btn_stl.backgroundImage = "url('img/buttons/like_off.png')"
+            btn_stl.opacity = 1
+            btn_stl.backgroundSize = '32px'
+        }, 150);
+    }
+    flag *= -1
 }

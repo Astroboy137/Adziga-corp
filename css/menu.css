@@ -75,3 +75,17 @@
     left: 0;
     margin: 24px;
 }
+
+.card_bottom button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    height: 32px;
+    width: 32px;
+    background:transparent;
+    background-image: url('../img/buttons/like_off.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    transition: .15s;
+}
