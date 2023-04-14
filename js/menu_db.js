@@ -1,6 +1,6 @@
 const catalog = []
 
-function add_box() {
+function add_box(kol) {
     console.log(0)
     var box = document.createElement('div')
     box.className = 'block'
@@ -23,20 +23,32 @@ function add_box() {
         <script>let i = 4\
     i++\
     </script>\
-    <button id="like" class="like" onclick="like()">\
+    <button id="like" class="like" onclick="like('+kol+')">\
     </div>'
     
     document.getElementById('catalog').append(box)
 }
-// for (let index = 0; index < 10; index++) {
-//     add_box()
+for (let index = 0; index < 10; index++) {
+    add_box(index)
     
-// }
+}
+// setTimeout(() => {
+//     let btn_flag = 1
+//     const like_btns = document.getElementsByClassName('like')
+//     for (let index = 0; index < like_btns.length; index++) {
+//         const el = like_btns[index];
+//         console.log(el)
+//         el.onclick = function () {
+//             console.log(btn_flag)
+//         }
+//         btn_flag++
+//     }
+// }, 500);
 // надобудет добавить базу данных для лайков
 // пока что это просто анимация лайка
 var flag = 1
-function like() {
-    const btn = document.getElementById('like')
+function like(elm_num) {
+    const btn = document.getElementsByClassName('like')[elm_num]
     const btn_stl = btn.style
     if (flag > 0) {
         btn_stl.opacity = 0
