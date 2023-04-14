@@ -103,12 +103,16 @@
     position: absolute;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .cont2 img{
     height: 400px;
     min-width: 400px;
     opacity: 1;
-    transition: .2s;
+    transition: .25s;
+    position: absolute;
+    transform: translate(0, 0);
+    /* overflow: hidden; */
 }
 
 .cont3{
